@@ -1,0 +1,13 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    function active(businessId) { return request.auth != null && firestore.exists(/databases/(default)/documents/businesses/$(businessId)/members/$(request.auth.uid)) && firestore.get(/databases/(default)/documents/businesses/$(businessId)/members/$(request.auth.uid)).data.status == 'Active' && firestore.get(/databases/(default)/documents/businesses/$(businessId)).data.status != 'Closed'; }
+    function member(businessId) { return firestore.get(/databases/(default)/documents/businesses/$(businessId)/members/$(request.auth.uid)).data; }
+    function permitted(businessId,branchId,purpose) { return active(businessId) && (member(businessId).role == 'Owner' || branchId in member(businessId).branchIds && (purpose == 'Public photos' && member(businessId).role in ['Branch Manager','Catalog Staff'] || purpose == 'Chat attachment' && member(businessId).role in ['Branch Manager','Order Staff'])); }
+    match /business/{businessId}/{branchId}/{uid}/{file} {
+      allow create: if request.auth.uid == uid && permitted(businessId,branchId,request.resource.metadata.purpose) && request.resource.size > 0 && request.resource.size <= 10 * 1024 * 1024 && request.resource.contentType in ['image/jpeg','image/png','image/webp','application/pdf'] && request.resource.metadata.businessId == businessId && request.resource.metadata.ownerUid == uid;
+      allow read: if active(businessId) && (member(businessId).role == 'Owner' || branchId in member(businessId).branchIds && (resource.metadata.purpose == 'Public photos' && member(businessId).role in ['Branch Manager','Catalog Staff'] || resource.metadata.purpose == 'Chat attachment' && member(businessId).role in ['Branch Manager','Order Staff']));
+      allow update, delete: if false;
+    }
+  }
+}

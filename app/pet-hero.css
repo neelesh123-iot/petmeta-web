@@ -1,0 +1,126 @@
+.pet-character-hero {
+  --hero-ease: cubic-bezier(.4, 0, .2, 1);
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  min-height: 640px;
+  overflow: hidden;
+  color: #fff;
+  background: var(--hero-bg);
+  font-family: 'Inter', sans-serif;
+  transition: background-color 650ms var(--hero-ease);
+}
+.pet-hero-grain {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  opacity: .4;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.08' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+.pet-hero-wordmark {
+  position: absolute;
+  top: 14%;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+  font: 400 min(26vw, 43svh)/1 'Anton', Impact, sans-serif;
+  letter-spacing: -.025em;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+.pet-hero-brand, .pet-hero-edition {position: absolute; top: 30px; z-index: 60;}
+.pet-hero-brand {left: 32px; display: flex; align-items: center; gap: 12px; font-size: 15px; font-weight: 700; letter-spacing: .18em;}
+.pet-hero-brand>span>span {display: block; font-size: 7px; font-weight: 500; letter-spacing: .16em; margin-top: 3px;}
+.pet-hero-edition {right: 40px; display: flex; align-items: center; gap: 20px;}
+.pet-hero-edition>span {font-size: 9px; font-weight: 600; letter-spacing: .15em;}
+.pet-hero-edition b {font-size: 21px; font-weight: 500; font-variant-numeric: tabular-nums;}
+.pet-hero-edition i {font-size: 12px; font-style: normal; opacity: .7;}
+.pet-hero-stage {position: absolute; inset: 0; z-index: 3; pointer-events: none;}
+.pet-hero-pool {position: absolute; left: 50%; bottom: 1%; width: 50%; height: 13%; border-radius: 50%; transform: translateX(-50%); background: var(--hero-panel); filter: blur(26px); transition: background-color 650ms var(--hero-ease);}
+.pet-hero-character {
+  position: absolute;
+  aspect-ratio: .6 / 1;
+  transform: translateX(-50%) scale(1);
+  transform-origin: bottom center;
+  transition: transform 650ms var(--hero-ease), filter 650ms var(--hero-ease), opacity 650ms var(--hero-ease), left 650ms var(--hero-ease), height 650ms var(--hero-ease), bottom 650ms var(--hero-ease);
+  will-change: transform, filter, opacity;
+}
+.pet-hero-character img {width: 100%; height: 100%; max-width: none; object-fit: contain; object-position: bottom center; user-select: none;}
+/* The scaled centre stays fully inside the viewport, including ears and tails. */
+.pet-hero-character[data-role='center'] {left: 50%; bottom: 5%; height: 54%; transform: translateX(-50%) scale(1.68); filter: blur(0); opacity: 1; z-index: 20;}
+.pet-hero-character[data-role='left'], .pet-hero-character[data-role='right'] {height: 32%; bottom: 43%; filter: blur(2px); opacity: .85; z-index: 10;}
+.pet-hero-character[data-role='left'] {left: 30%;}
+.pet-hero-character[data-role='right'] {left: 70%;}
+.pet-hero-character[data-role='back'] {left: 50%; height: 22%; bottom: 44%; filter: blur(4px); opacity: 0; z-index: 5;}
+.pet-hero-copy {position: absolute; bottom: 48px; left: clamp(32px, 6.7vw, 96px); z-index: 60; width: 280px; max-width: 23%;}
+.pet-hero-kicker {display: block; font-size: 9px; font-weight: 600; letter-spacing: .1em; margin-bottom: 12px;}
+.pet-character-hero .pet-hero-copy h1 {font: 700 clamp(18px, 1.5vw, 22px)/1.2 'Inter', sans-serif; letter-spacing: -.025em; color: #fff; margin: 0 0 12px;}
+.pet-hero-copy p {font-size: 13px; line-height: 1.65; margin: 0 0 24px; color: #fff;}
+.pet-hero-navigation {display: flex; align-items: center; gap: 10px;}
+.pet-character-hero .pet-hero-navigation button {display: grid; place-items: center; flex: 0 0 64px; width: 64px; height: 64px; border-radius: 50%; border: 2px solid white; background: transparent; color: white; padding: 0; transition: transform 150ms, background-color 150ms;}
+.pet-character-hero .pet-hero-navigation button:hover {transform: scale(1.08); background: #ffffff1f;}
+.pet-character-hero .pet-hero-navigation button:active {transform: scale(.95);}
+.pet-hero-counter {font-size: 11px; font-weight: 600; margin-left: 10px; white-space: nowrap; font-variant-numeric: tabular-nums;}
+.pet-hero-counter span {opacity: .65; margin-left: 3px;}
+.pet-character-hero .pet-hero-discover {position: absolute; bottom: 80px; right: 40px; z-index: 60; display: flex; align-items: center; gap: 18px; color: #fff; font: 400 clamp(20px, 4vw, 56px)/1 'Anton', Impact, sans-serif; letter-spacing: -.02em; text-decoration: none; opacity: .95; transition: opacity 200ms, gap 200ms;}
+.pet-hero-discover svg {width: 32px; height: 32px;}
+.pet-character-hero .pet-hero-discover:hover {opacity: 1; gap: 26px;}
+.pet-hero-footnote {position: absolute; bottom: 24px; right: 40px; z-index: 60; font-size: 8px; letter-spacing: .16em; opacity: .75;}
+.pet-character-hero :is(a, button):focus-visible {outline: 3px solid #24291e; outline-offset: 6px;}
+@media (min-width: 640px) and (max-width: 1000px) {
+  .pet-hero-copy {left: 24px; max-width: 25%;}
+  .pet-hero-copy p {font-size: 11px;}
+  .pet-hero-counter {display: none;}
+  .pet-hero-character[data-role='center'] {height: 48%; bottom: 17%;}
+  .pet-hero-character[data-role='left'], .pet-hero-character[data-role='right'], .pet-hero-character[data-role='back'] {bottom: 54%;}
+  .pet-hero-character[data-role='left'] {left: 17%;}
+  .pet-hero-character[data-role='right'] {left: 83%;}
+  .pet-character-hero .pet-hero-discover {right: 24px;}
+}
+@media (max-width: 639px) {
+  .pet-character-hero {min-height: 640px;}
+  .pet-hero-brand {top: 24px; left: 16px; font-size: 12px; gap: 8px;}
+  .pet-hero-brand>span>span {font-size: 6px;}
+  .pet-hero-edition {top: 24px; right: 16px;}
+  .pet-hero-edition>span {display: none;}
+  .pet-hero-wordmark {top: 15%; font-size: 25vw;}
+  .pet-hero-character[data-role='center'] {height: 50%; bottom: 29%; transform: translateX(-50%) scale(1.28);}
+  .pet-hero-character[data-role='left'], .pet-hero-character[data-role='right'] {height: 16%; bottom: 40%;}
+  .pet-hero-character[data-role='left'] {left: 15%;}
+  .pet-hero-character[data-role='right'] {left: 85%;}
+  .pet-hero-character[data-role='back'] {height: 13%; bottom: 40%;}
+  .pet-hero-pool {bottom: 32%; width: 75%; height: 6%; filter: blur(12px);}
+  .pet-hero-copy {bottom: 90px; left: 16px; max-width: calc(100% - 32px); width: auto;}
+  .pet-hero-kicker {font-size: 8px; margin-bottom: 6px;}
+  .pet-character-hero .pet-hero-copy h1 {font-size: 18px; margin-bottom: 16px;}
+  .pet-hero-copy p {display: none;}
+  .pet-character-hero .pet-hero-navigation button {flex-basis: 48px; width: 48px; height: 48px;}
+  .pet-hero-counter {display: none;}
+  .pet-character-hero .pet-hero-discover {bottom: 100px; right: 16px; font-size: 25px; gap: 8px;}
+  .pet-hero-discover svg {width: 20px; height: 20px;}
+  .pet-hero-footnote {bottom: 70px; right: 16px; font-size: 6px;}
+}
+@media (prefers-reduced-motion: reduce) {
+  .pet-character-hero, .pet-character-hero *, .pet-character-hero .pet-hero-navigation button, .pet-character-hero .pet-hero-discover {transition: none; animation: none;}
+}
+
+/* Wider silhouettes keep fins and the tortoise shell generous without cropping. */
+.pet-hero-character[data-animal='Fish'],.pet-hero-character[data-animal='Tortoise'] {aspect-ratio:1;}
+.pet-hero-character[data-role='center'][data-animal='Fish'],.pet-hero-character[data-role='center'][data-animal='Tortoise'] {height:43%;bottom:17%;transform:translateX(-50%) scale(1.68);}
+.pet-character-hero .pet-hero-navigation .pet-hero-rotation {width:40px;height:40px;flex-basis:40px;border-width:1px;}
+@media (min-width:640px) and (max-width:1000px) {
+ .pet-hero-character[data-role='center'][data-animal='Fish'],.pet-hero-character[data-role='center'][data-animal='Tortoise'] {height:35%;bottom:30%;}
+}
+@media (max-width:639px) {
+ .pet-hero-character[data-role='center'][data-animal='Fish'],.pet-hero-character[data-role='center'][data-animal='Tortoise'] {height:auto;width:78%;bottom:36%;transform:translateX(-50%) scale(1);}
+ .pet-hero-copy {bottom:82px;}
+ .pet-character-hero .pet-hero-discover {bottom:28px;}
+ .pet-hero-footnote {bottom:12px;font-size:5px;}
+ .pet-hero-pool {bottom:29%;}
+}

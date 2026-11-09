@@ -1,0 +1,83 @@
+.pet-directory {background:#fff;color:#24291e;min-height:100svh;--directory-gold:#ffda27;--discovery-icon:128px;}
+.pet-directory-loading {min-height:100svh;background:#fff;display:grid;place-items:center;color:#636a59;}
+.pet-directory :is(button,a,input,select):focus-visible {outline:3px solid #9b7d12;outline-offset:4px;}
+.pet-directory-header {height:94px;box-sizing:border-box;padding:12px clamp(24px,5vw,84px);display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid #e9ece3;background:#fff;}
+.pet-directory a {text-decoration:none;color:inherit;}
+.pet-directory-logo img {display:block;width:116px;height:58px;object-fit:contain;}
+.pet-directory-header nav {display:flex;align-items:center;gap:30px;}
+.pet-directory-header nav>a,.pet-directory-header button {display:flex;align-items:center;gap:9px;font-size:12px;font-weight:600;}
+.pet-directory-header button {border:1px solid #e1e5d7;border-radius:30px;padding:11px 15px;background:#fff;}
+.pet-directory-header button[aria-pressed=true] {background:#fff9dd;border-color:#c8a51b;}
+.pet-directory-header b {font-size:10px;background:#f4f5ef;border-radius:50%;width:20px;height:20px;display:grid;place-items:center;}
+.pet-directory-main {max-width:1600px;margin:auto;padding:0 clamp(24px,5vw,84px) 45px;}
+.pet-directory-breadcrumb {display:flex;gap:11px;align-items:center;padding:24px 0;font-size:11px;color:#7b8171;}
+.pet-directory-breadcrumb span:last-child {color:#24291e;}
+.pet-directory-intro {display:flex;align-items:center;justify-content:space-between;gap:32px;margin:20px 0 30px;}
+.pet-directory-eyebrow {display:block;letter-spacing:.16em;font-size:9px;font-weight:650;color:#818774;}
+.pet-directory h1 {font-size:clamp(34px,4.2vw,58px);line-height:1.12;letter-spacing:-2px;font-weight:650;margin:14px 0 16px;}
+.pet-directory h1 em {font-style:normal;display:inline;}
+.pet-directory-intro p {font-size:13px;line-height:1.8;color:#6d7561;margin:0;max-width:620px;}
+.pet-directory-intro-icon {width:124px;flex-shrink:0;transform:rotate(4deg);}
+.pet-directory-intro-icon .discovery-icon {max-width:none;border-radius:24px;}
+.pet-directory-intro-paw {color:#e0c95f;margin:0 20px;flex-shrink:0;}
+.pet-directory-categories {display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;padding-bottom:30px;border-bottom:1px solid #e8ebdf;}
+.pet-directory-categories>a {display:flex;align-items:center;gap:12px;border:1px solid #e7eadf;border-radius:12px;padding:9px 11px;position:relative;transition:transform .25s,border-color .25s;min-width:0;font-size:12px;font-weight:600;}
+.pet-directory-categories>a:hover {transform:translateY(-3px);border-color:#b8bfaa;}
+.pet-directory-categories>a[aria-current=page] {border-color:#cbaa1c;background:#fffcef;box-shadow:inset 0 0 0 1px #cbaa1c;}
+.pet-directory-categories .discovery-icon {width:48px;max-width:48px;flex-shrink:0;aspect-ratio:1;border-radius:9px;}
+.pet-directory-categories>a>svg {position:absolute;right:6px;top:6px;color:#957a0a;width:11px;}
+.pet-directory-results {padding-top:34px;}
+.pet-directory-results-heading {display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:24px;}
+.pet-directory-results-heading h2 {font-size:27px;letter-spacing:-.8px;font-weight:650;line-height:1.3;margin:9px 0 0;}
+.pet-directory-results-heading>p {font-size:10px;line-height:1.6;color:#7e8572;margin:0 0 4px;text-align:right;}
+.pet-directory-filters {display:flex;gap:14px;align-items:stretch;}
+.pet-directory-filters label {min-width:0;}
+.pet-directory-breed {position:relative;flex:1.2;border:1px solid #d6dccb;border-radius:10px;padding:10px 12px 8px 42px;background:#fff;}
+.pet-directory-breed>svg {position:absolute;left:14px;top:23px;color:#a58c27;}
+.pet-directory-breed>span,.pet-directory-sort>span {display:block;font-size:9px;color:#7a826b;margin-bottom:3px;}
+.pet-directory-filters select {appearance:auto;background:#fff;color:#24291e;border:0;font-size:12px;font-weight:550;width:100%;padding:2px 0;min-width:0;}
+.pet-directory-search {flex:1.5;display:flex;align-items:center;gap:10px;border:1px solid #d6dccb;border-radius:10px;padding:12px 15px;}
+.pet-directory-search>svg {color:#969f86;flex-shrink:0;}
+.pet-directory-search input {border:0;background:#fff;outline:none;font-size:12px;width:100%;min-width:0;color:#24291e;}
+.pet-directory-search button {display:grid;place-items:center;color:#788065;}
+.pet-directory-sort {flex:.8;border:1px solid #d6dccb;border-radius:10px;padding:10px 13px 8px;}
+.pet-directory-result-meta {display:flex;align-items:center;gap:16px;min-height:54px;font-size:11px;}
+.pet-directory-result-meta p {margin:0;color:#747c67;}
+.pet-directory-result-meta button {display:flex;align-items:center;gap:6px;font-size:10px;text-decoration:underline;text-underline-offset:3px;}
+.pet-directory-result-meta>span {margin-left:auto;font-size:10px;color:#8d6e32;}
+.pet-directory-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;}
+.pet-directory-card {border:1px solid #e5e9dc;border-radius:16px;overflow:hidden;min-width:0;transition:box-shadow .25s,transform .25s;animation:pet-directory-reveal .3s ease-out;}
+.pet-directory-card:hover {transform:translateY(-3px);box-shadow:0 12px 20px -15px #24291e30;}
+.pet-directory-photo {position:relative;aspect-ratio:1;overflow:hidden;background:#fff;}
+.pet-directory-photo>button:first-child {display:block;width:100%;height:100%;padding:0;}
+.pet-directory-photo img {width:100%;height:100%;object-fit:contain;transition:transform .4s;}
+.pet-directory-photo>button:first-child:hover img {transform:scale(1.035);}
+.pet-directory-photo .pet-directory-heart {display:grid;place-items:center;position:absolute;right:12px;top:12px;width:35px;height:35px;background:#fff;border:1px solid #eceee5;border-radius:50%;}
+.pet-directory-photo>span {position:absolute;bottom:12px;left:12px;background:#fff;padding:6px 9px;border-radius:5px;color:#806444;font-size:9px;}
+.pet-directory-card-copy {padding:18px;}
+.pet-directory-card-copy>span {display:block;letter-spacing:.09em;text-transform:uppercase;font-size:8px;color:#858c78;}
+.pet-directory-card-copy h3 {font-size:17px;line-height:1.35;font-weight:650;letter-spacing:-.3px;margin:10px 0 12px;min-height:46px;}
+.pet-directory-card-copy h3 button {text-align:left;}
+.pet-directory-card-copy>div {display:flex;align-items:baseline;flex-wrap:wrap;gap:7px;}
+.pet-directory-card-copy b {font-size:20px;letter-spacing:-.6px;}
+.pet-directory-card-copy small {font-size:9px;color:#858b79;}
+.pet-directory-details {display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px;border-top:1px solid #ebeee3;padding-top:14px;width:100%;font-size:11px;font-weight:600;}
+.pet-directory-details svg {color:#a38a20;}
+.pet-directory-load {display:flex;align-items:center;justify-content:center;gap:14px;margin:32px auto 0;border:1px solid #dbe1d0;border-radius:30px;padding:13px 23px;font-size:12px;font-weight:600;background:#fff;}
+.pet-directory-load>span {color:#8a927b;font-size:10px;font-weight:400;}
+.pet-directory-note {font-size:10px;line-height:1.7;color:#858c79;text-align:center;margin:25px 0 0;}
+.pet-directory-empty {border:1px solid #e5e9dc;border-radius:18px;padding:55px 20px;text-align:center;}
+.pet-directory-empty>svg {margin:auto;color:#b0a16b;}
+.pet-directory-empty h3 {font-size:22px;font-weight:600;margin:16px 0 10px;}
+.pet-directory-empty p {font-size:12px;color:#7e8770;}
+.pet-directory-empty button {display:flex;align-items:center;gap:14px;background:#ffda27;border-radius:9px;padding:12px 20px;margin:24px auto 0;font-size:12px;font-weight:600;}
+.pet-directory-error {font-size:12px;color:#993c26;}
+.pet-directory-footer {border-top:1px solid #e9ece2;display:flex;align-items:center;gap:10px;padding:26px clamp(24px,5vw,84px);font-size:9px;letter-spacing:.12em;color:#939b83;}
+.pet-directory-footer>a {margin-left:auto;display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:0;color:#4c5840;}
+@keyframes pet-directory-reveal {from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1100px) {.pet-directory-categories>a{gap:8px;padding:8px;font-size:10px}.pet-directory-categories .discovery-icon{width:36px;max-width:36px}.pet-directory-grid{gap:16px}.pet-directory-card-copy{padding:14px}.pet-directory-card-copy h3{font-size:15px}.pet-directory-filters{gap:10px}}
+@media(max-width:767px) {.pet-directory-categories{grid-template-columns:repeat(3,1fr)}.pet-directory-categories .discovery-icon{width:44px;max-width:44px}.pet-directory-categories>a{font-size:11px;gap:12px}.pet-directory-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.pet-directory-results-heading{align-items:start}.pet-directory-intro-icon{width:100px}.pet-directory-filters{flex-wrap:wrap}.pet-directory-breed{flex-basis:40%}.pet-directory-search{flex-basis:40%}.pet-directory-sort{flex:0 1 180px}.pet-directory-results-heading>p{max-width:150px}}
+@media(max-width:539px) {
+ .pet-directory-header{height:78px;padding:10px 18px;gap:12px}.pet-directory-logo img{width:86px;height:48px}.pet-directory-header nav{gap:14px}.pet-directory-header nav>a{font-size:10px;gap:5px}.pet-directory-header button{padding:9px;gap:6px}.pet-directory-header button>span{display:none}.pet-directory-main{padding:0 18px 28px}.pet-directory-breadcrumb{padding:20px 0;font-size:10px}.pet-directory-intro{gap:18px;margin:8px 0 26px}.pet-directory h1{font-size:34px;letter-spacing:-1.3px;margin:11px 0 13px}.pet-directory-intro p{font-size:11px;line-height:1.75}.pet-directory-eyebrow{font-size:7px;letter-spacing:.1em}.pet-directory-intro-icon{width:74px;align-self:start;margin-top:25px}.pet-directory-intro-icon .discovery-icon{border-radius:15px}.pet-directory-intro-paw{width:45px;height:45px;margin:0;}.pet-directory-categories{gap:9px;padding-bottom:24px}.pet-directory-categories>a{padding:7px;gap:7px;font-size:9px;border-radius:10px}.pet-directory-categories .discovery-icon{width:35px;max-width:35px;border-radius:7px}.pet-directory-categories>a>svg{right:3px;top:3px;width:8px}.pet-directory-results{padding-top:26px}.pet-directory-results-heading{display:block;margin-bottom:20px}.pet-directory-results-heading h2{font-size:23px;letter-spacing:-.7px}.pet-directory-results-heading>p{text-align:left;max-width:none;font-size:9px;margin-top:8px}.pet-directory-filters{display:grid;grid-template-columns:1fr 1fr;gap:10px}.pet-directory-breed{grid-column:1/-1;padding:10px 12px 8px 40px}.pet-directory-search{grid-column:1/2;padding:11px 10px;gap:7px}.pet-directory-search input{font-size:11px}.pet-directory-sort{padding:8px 10px}.pet-directory-filters select{font-size:11px}.pet-directory-result-meta{font-size:10px;gap:10px;flex-wrap:wrap;padding:12px 0;min-height:48px}.pet-directory-result-meta>span{font-size:8px}.pet-directory-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.pet-directory-card{border-radius:12px}.pet-directory-card-copy{padding:13px 11px}.pet-directory-card-copy>span{font-size:7px;letter-spacing:.06em}.pet-directory-card-copy h3{font-size:14px;min-height:38px;margin:9px 0 10px}.pet-directory-card-copy b{font-size:17px}.pet-directory-card-copy small{font-size:8px}.pet-directory-details{font-size:9px;margin-top:12px;padding-top:12px;gap:5px}.pet-directory-details svg{width:14px}.pet-directory-photo .pet-directory-heart{width:28px;height:28px;right:8px;top:8px}.pet-directory-heart svg{width:16px}.pet-directory-photo>span{left:8px;bottom:8px;font-size:8px;padding:5px 7px}.pet-directory-load{gap:10px;font-size:11px;padding:12px 18px}.pet-directory-load>span{font-size:8px}.pet-directory-note{font-size:9px}.pet-directory-footer{padding:22px 18px;gap:7px;font-size:6px;letter-spacing:.08em}.pet-directory-footer>a{font-size:10px}.pet-directory-empty h3{font-size:19px}
+}
+@media(prefers-reduced-motion:reduce) {.pet-directory * {animation:none!important;transition:none!important}}

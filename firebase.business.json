@@ -1,0 +1,68 @@
+{
+  "functions": [
+    {
+      "source": "business-backend",
+      "codebase": "petmeta-business",
+      "runtime": "nodejs22",
+      "ignore": [
+        "node_modules",
+        "*.test.cjs",
+        ".env*",
+        ".secret*"
+      ]
+    }
+  ],
+  "firestore": {
+    "rules": "business-backend/firestore.rules"
+  },
+  "storage": {
+    "rules": "business-backend/storage.rules"
+  },
+  "hosting": {
+    "public": "business-android/app/src/main/assets/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
+          },
+          {
+            "key": "Referrer-Policy",
+            "value": "strict-origin-when-cross-origin"
+          }
+        ]
+      }
+    ],
+    "site": "petmeta-business-e8470"
+  },
+  "emulators": {
+    "auth": {
+      "port": 9099
+    },
+    "firestore": {
+      "port": 8088
+    },
+    "storage": {
+      "port": 9199
+    },
+    "ui": {
+      "enabled": false
+    },
+    "singleProjectMode": true,
+    "functions": {
+      "port": 5009
+    }
+  }
+}

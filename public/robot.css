@@ -1,0 +1,33 @@
+/* Small white companion reconstructed from the supplied video. */
+.robot{position:relative;width:88px;height:100px;perspective:600px;--cyan:#06e8ed;--gaze:0px}
+.robot-float{position:absolute;inset:0;animation:robot-bob 3.8s ease-in-out infinite}
+.robot-turn{position:absolute;inset:0;transform-style:preserve-3d;transition:transform 550ms cubic-bezier(.4,0,.2,1)}
+.robot-antenna{position:absolute;left:43px;top:0;width:2px;height:16px;background:#b9d2db}
+.robot-antenna:before{content:'';position:absolute;width:6px;height:6px;left:-2px;top:-1px;border-radius:50%;background:var(--cyan);box-shadow:0 0 5px #00ffff55}
+.robot-head{position:absolute;left:12px;top:13px;width:64px;height:61px;border-radius:51% 51% 45% 45%;background:linear-gradient(120deg,#fff 55%,#e5e7ff);box-shadow:inset 0 -3px 0 #bdb7f4,0 0 2px #ffffffa0;transform-style:preserve-3d}
+.robot-visor{position:absolute;inset:15px 5px 5px;border-radius:48% 48% 44% 44%;background:linear-gradient(140deg,#12252e,#06121c);border:1px solid #8aa9b6;transform:translateZ(5px);backface-visibility:hidden;display:flex;align-items:center;justify-content:center;gap:15px;overflow:hidden}
+.robot-visor:before{content:'';position:absolute;left:10px;top:5px;width:13px;height:3px;border-radius:50%;background:#dffcff16;transform:rotate(-20deg)}
+.robot-eye{width:8px;height:14px;background:var(--cyan);border-radius:55% 45% 45% 55%;box-shadow:0 0 5px #00eeff60;transform:translate(var(--gaze),3px);animation:robot-blink 5.3s infinite;transition:transform .35s,height .35s}
+.robot-eye:first-child{clip-path:polygon(0 0,100% 0,65% 50%,100% 100%,0 100%)}.robot-eye:last-child{clip-path:polygon(0 0,100% 0,100% 100%,0 100%,35% 50%)}
+.robot-back{position:absolute;inset:0;border-radius:inherit;background:linear-gradient(120deg,#fff 60%,#ebedff);transform:rotateY(180deg) translateZ(2px);backface-visibility:hidden;border-bottom:3px solid #c4bcfa}
+.robot-ear{position:absolute;top:25px;width:6px;height:15px;border:2px solid #8d9dfb;background:#04e1eb;border-radius:3px;transform:translateZ(0)}.robot-ear.left{left:-6px}.robot-ear.right{right:-6px}
+.robot-neck{position:absolute;left:29px;top:72px;width:30px;height:8px;background:#d1caff;border-radius:50%;transform:translateZ(-1px)}
+.robot-body{position:absolute;left:20px;top:76px;width:48px;height:19px;border-radius:5px 5px 40% 40%;background:linear-gradient(100deg,#fff,#f4f7ff);box-shadow:0 -2px 0 #c9d2d7}
+.robot-arm{position:absolute;top:73px;width:10px;height:22px;background:linear-gradient(100deg,#c1d2d4 0 22%,#fff 30%);border-radius:7px;transform-origin:50% 4px}.robot-arm.left{left:15px;transform:rotate(-12deg)}.robot-arm.right{right:15px;transform:rotate(12deg)}
+.robot-foot{position:absolute;top:90px;width:13px;height:9px;background:#fff;border-radius:4px 4px 7px 7px}.robot-foot.left{left:20px;transform:rotate(13deg)}.robot-foot.right{right:20px;transform:rotate(-13deg)}
+.state-curious{--gaze:-3px}.state-reading{--gaze:3px}.state-curious .robot-turn{transform:rotate(-5deg)}
+.state-shy .robot-turn{transform:rotateY(180deg)}.state-shy .robot-visor{opacity:0;transition:opacity .18s .08s}.state-shy .robot-ear.right{box-shadow:0 0 5px #00ffff66}
+.state-sad .robot-turn{transform:rotate(8deg) translateY(3px)}.state-sad .robot-eye{height:5px;animation:none}.state-happy .robot-eye,.state-joyful .robot-eye{height:7px;border-radius:9px 9px 0 0;clip-path:none}
+.state-joyful .robot-float{animation:robot-cheer .6s ease-in-out 3}.state-joyful .robot-arm.right{transform:rotate(-115deg)}
+.robot .robot-visor{transition:opacity .2s .15s}
+@keyframes robot-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes robot-blink{0%,43%,47%,100%{scale:1 1}45%{scale:1 .12}}
+@keyframes robot-cheer{50%{transform:translateY(-12px) rotate(-6deg)}}
+.animated-auth main.auth-center{padding-top:13.5vh}.auth-heading{height:93px}.auth-heading>span{font-size:clamp(25px,6.67vw,36px)}.auth-heading h1{font-size:32px;font-weight:500}.auth-stack{margin-top:max(130px,calc(30.5vh - 93px))}.animated-auth.is-signin .auth-stack{margin-top:max(150px,calc(34vh - 93px))}
+.reactive-cat{width:88px;height:100px;top:-91px}.mood-bubble{top:-50px;font-size:12px;white-space:nowrap;max-width:calc(100vw - 24px)}
+.animated-auth{background-size:16px 16px;background-image:radial-gradient(circle,#8173ff06 .6px,transparent .8px)}
+.reference-disclosure{display:none}
+.animated-auth{font-family:'Poppins','Segoe UI',Arial,sans-serif}.auth-heading>span{letter-spacing:.1px}.reactive-auth-card #subtitle{margin-bottom:16px!important}.reactive-auth-card .auth-tabs{margin-bottom:17px}.reactive-auth-card label{line-height:1.3}.reactive-auth-card form{gap:12px}
+@media(max-width:560px){.animated-auth main.auth-center{padding-top:13.5vh}.auth-heading h1{font-size:30px}.reactive-auth-card{padding:30px 26px 22px}.reactive-auth-card .auth-tabs{margin-bottom:20px}}
+@media(max-height:700px){.animated-auth main.auth-center{padding-top:30px}.auth-stack{margin-top:125px}.animated-auth.is-signin .auth-stack{margin-top:145px}}
+@media(prefers-reduced-motion:reduce){.robot *{animation:none!important;transition:none!important}}

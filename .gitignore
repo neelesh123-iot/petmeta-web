@@ -1,0 +1,19 @@
+node_modules/
+.next/
+.next-production/
+.env*
+!.env.example
+test-results/
+playwright-report/
+*.tsbuildinfo
+
+.local-data/
+
+# Rider Android build outputs
+.rider-build/
+rider-android/.gradle/
+rider-android/build/
+rider-android/local.properties
+rider-android/app/src/main/assets/rider.js
+rider-android/app/src/main/assets/rider.js.LICENSE.txt
+.rider-build-v1.0.1/

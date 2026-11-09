@@ -1,0 +1,11 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+const file='public/animated-login.html';
+let html=readFileSync(file,'utf8');
+html=html.replace('<link rel="stylesheet" href="video-reference.css">','<link rel="stylesheet" href="video-reference.css"><link rel="stylesheet" href="robot.css">');
+html=html.replace('aria-label="cat">🐈','aria-label="robot">🤖');
+html=html.replace(/      <div class="living-photo state-idle"[^\n]+/,`      <div class="robot state-idle" id="photo" role="img" aria-label="Animated white robot with cyan eyes"><div class="robot-float"><div class="robot-turn"><div class="robot-antenna"></div><div class="robot-head"><i class="robot-ear left"></i><i class="robot-ear right"></i><div class="robot-visor"><i class="robot-eye"></i><i class="robot-eye"></i></div><div class="robot-back"></div></div><div class="robot-neck"></div><div class="robot-body"></div><i class="robot-arm left"></i><i class="robot-arm right"></i><i class="robot-foot left"></i><i class="robot-foot right"></i></div></div></div>`);
+writeFileSync(file,html);
+const jsFile='public/animated-login.js';
+let js=readFileSync(jsFile,'utf8').replace('`living-photo state-${state}`','`robot state-${state}`').replace('Turning around! Your password stays private 🙈🔒','Turning around! Your password is 100% private 🙈🔒').replace('That looks purr-fect! ✦','You’re all set! 🎉');
+js=js.replace("$('bubble').textContent = messages[state];", "$('bubble').textContent = messages[state];\n    $('photo').setAttribute('aria-label', state === 'shy' ? 'Robot turned away for password privacy' : 'Animated white robot with cyan eyes');");
+writeFileSync(jsFile,js);

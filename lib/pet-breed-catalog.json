@@ -1,0 +1,1458 @@
+[
+  {
+    "id": "dog-0",
+    "name": "Labrador Retriever",
+    "breed": "Labrador Retriever",
+    "species": "Dog",
+    "price": 10000,
+    "image": "/discovery/dog/0.webp"
+  },
+  {
+    "id": "dog-1",
+    "name": "Golden Retriever",
+    "breed": "Golden Retriever",
+    "species": "Dog",
+    "price": 11053,
+    "image": "/discovery/dog/1.webp"
+  },
+  {
+    "id": "dog-2",
+    "name": "German Shepherd",
+    "breed": "German Shepherd",
+    "species": "Dog",
+    "price": 12105,
+    "image": "/discovery/dog/2.webp"
+  },
+  {
+    "id": "dog-3",
+    "name": "Pomeranian",
+    "breed": "Pomeranian",
+    "species": "Dog",
+    "price": 13158,
+    "image": "/discovery/dog/3.webp"
+  },
+  {
+    "id": "dog-4",
+    "name": "Beagle",
+    "breed": "Beagle",
+    "species": "Dog",
+    "price": 14211,
+    "image": "/discovery/dog/4.webp"
+  },
+  {
+    "id": "dog-5",
+    "name": "Pug",
+    "breed": "Pug",
+    "species": "Dog",
+    "price": 15263,
+    "image": "/discovery/dog/5.webp"
+  },
+  {
+    "id": "dog-6",
+    "name": "Rottweiler",
+    "breed": "Rottweiler",
+    "species": "Dog",
+    "price": 16316,
+    "image": "/discovery/dog/6.webp"
+  },
+  {
+    "id": "dog-7",
+    "name": "Siberian Husky",
+    "breed": "Siberian Husky",
+    "species": "Dog",
+    "price": 17368,
+    "image": "/discovery/dog/7.webp"
+  },
+  {
+    "id": "dog-8",
+    "name": "Doberman",
+    "breed": "Doberman",
+    "species": "Dog",
+    "price": 18421,
+    "image": "/discovery/dog/8.webp"
+  },
+  {
+    "id": "dog-9",
+    "name": "Shih Tzu",
+    "breed": "Shih Tzu",
+    "species": "Dog",
+    "price": 19474,
+    "image": "/discovery/dog/9.webp"
+  },
+  {
+    "id": "dog-10",
+    "name": "Chihuahua",
+    "breed": "Chihuahua",
+    "species": "Dog",
+    "price": 20526,
+    "image": "/discovery/dog/10.webp"
+  },
+  {
+    "id": "dog-11",
+    "name": "Dachshund",
+    "breed": "Dachshund",
+    "species": "Dog",
+    "price": 21579,
+    "image": "/discovery/dog/11.webp"
+  },
+  {
+    "id": "dog-12",
+    "name": "Boxer",
+    "breed": "Boxer",
+    "species": "Dog",
+    "price": 22632,
+    "image": "/discovery/dog/12.webp"
+  },
+  {
+    "id": "dog-13",
+    "name": "Great Dane",
+    "breed": "Great Dane",
+    "species": "Dog",
+    "price": 23684,
+    "image": "/discovery/dog/13.webp"
+  },
+  {
+    "id": "dog-14",
+    "name": "Saint Bernard",
+    "breed": "Saint Bernard",
+    "species": "Dog",
+    "price": 24737,
+    "image": "/discovery/dog/14.webp"
+  },
+  {
+    "id": "dog-15",
+    "name": "Cocker Spaniel",
+    "breed": "Cocker Spaniel",
+    "species": "Dog",
+    "price": 25789,
+    "image": "/discovery/dog/15.webp"
+  },
+  {
+    "id": "dog-16",
+    "name": "Border Collie",
+    "breed": "Border Collie",
+    "species": "Dog",
+    "price": 26842,
+    "image": "/discovery/dog/16.webp"
+  },
+  {
+    "id": "dog-17",
+    "name": "Australian Shepherd",
+    "breed": "Australian Shepherd",
+    "species": "Dog",
+    "price": 27895,
+    "image": "/discovery/dog/17.webp"
+  },
+  {
+    "id": "dog-18",
+    "name": "Dalmatian",
+    "breed": "Dalmatian",
+    "species": "Dog",
+    "price": 28947,
+    "image": "/discovery/dog/18.webp"
+  },
+  {
+    "id": "dog-19",
+    "name": "Yorkshire Terrier",
+    "breed": "Yorkshire Terrier",
+    "species": "Dog",
+    "price": 30000,
+    "image": "/discovery/dog/19.webp"
+  },
+  {
+    "id": "dog-20",
+    "name": "French Bulldog",
+    "breed": "French Bulldog",
+    "species": "Dog",
+    "price": 18163,
+    "image": "/discovery/dog/20.webp"
+  },
+  {
+    "id": "dog-21",
+    "name": "English Bulldog",
+    "breed": "English Bulldog",
+    "species": "Dog",
+    "price": 18571,
+    "image": "/discovery/dog/21.webp"
+  },
+  {
+    "id": "dog-22",
+    "name": "Belgian Malinois",
+    "breed": "Belgian Malinois",
+    "species": "Dog",
+    "price": 18980,
+    "image": "/discovery/dog/22.webp"
+  },
+  {
+    "id": "dog-23",
+    "name": "Akita",
+    "breed": "Akita",
+    "species": "Dog",
+    "price": 19388,
+    "image": "/discovery/dog/23.webp"
+  },
+  {
+    "id": "dog-24",
+    "name": "Chow Chow",
+    "breed": "Chow Chow",
+    "species": "Dog",
+    "price": 19796,
+    "image": "/discovery/dog/24.webp"
+  },
+  {
+    "id": "dog-25",
+    "name": "Cane Corso",
+    "breed": "Cane Corso",
+    "species": "Dog",
+    "price": 20204,
+    "image": "/discovery/dog/25.webp"
+  },
+  {
+    "id": "dog-26",
+    "name": "Samoyed",
+    "breed": "Samoyed",
+    "species": "Dog",
+    "price": 20612,
+    "image": "/discovery/dog/26.webp"
+  },
+  {
+    "id": "dog-27",
+    "name": "Alaskan Malamute",
+    "breed": "Alaskan Malamute",
+    "species": "Dog",
+    "price": 21020,
+    "image": "/discovery/dog/27.webp"
+  },
+  {
+    "id": "dog-28",
+    "name": "Corgi",
+    "breed": "Corgi",
+    "species": "Dog",
+    "price": 21429,
+    "image": "/discovery/dog/28.webp"
+  },
+  {
+    "id": "dog-29",
+    "name": "Maltese",
+    "breed": "Maltese",
+    "species": "Dog",
+    "price": 21837,
+    "image": "/discovery/dog/29.webp"
+  },
+  {
+    "id": "dog-30",
+    "name": "Bichon Frise",
+    "breed": "Bichon Frise",
+    "species": "Dog",
+    "price": 22245,
+    "image": "/discovery/dog/30.webp"
+  },
+  {
+    "id": "dog-31",
+    "name": "Boston Terrier",
+    "breed": "Boston Terrier",
+    "species": "Dog",
+    "price": 22653,
+    "image": "/discovery/dog/31.webp"
+  },
+  {
+    "id": "dog-32",
+    "name": "Jack Russell Terrier",
+    "breed": "Jack Russell Terrier",
+    "species": "Dog",
+    "price": 23061,
+    "image": "/discovery/dog/32.webp"
+  },
+  {
+    "id": "dog-33",
+    "name": "Shiba Inu",
+    "breed": "Shiba Inu",
+    "species": "Dog",
+    "price": 23469,
+    "image": "/discovery/dog/33.webp"
+  },
+  {
+    "id": "dog-34",
+    "name": "Afghan Hound",
+    "breed": "Afghan Hound",
+    "species": "Dog",
+    "price": 23878,
+    "image": "/discovery/dog/34.webp"
+  },
+  {
+    "id": "dog-35",
+    "name": "Greyhound",
+    "breed": "Greyhound",
+    "species": "Dog",
+    "price": 24286,
+    "image": "/discovery/dog/35.webp"
+  },
+  {
+    "id": "dog-36",
+    "name": "Bullmastiff",
+    "breed": "Bullmastiff",
+    "species": "Dog",
+    "price": 24694,
+    "image": "/discovery/dog/36.webp"
+  },
+  {
+    "id": "dog-37",
+    "name": "Newfoundland",
+    "breed": "Newfoundland",
+    "species": "Dog",
+    "price": 25102,
+    "image": "/discovery/dog/37.webp"
+  },
+  {
+    "id": "dog-38",
+    "name": "Bernese Mountain Dog",
+    "breed": "Bernese Mountain Dog",
+    "species": "Dog",
+    "price": 25510,
+    "image": "/discovery/dog/38.webp"
+  },
+  {
+    "id": "dog-39",
+    "name": "Irish Setter",
+    "breed": "Irish Setter",
+    "species": "Dog",
+    "price": 25918,
+    "image": "/discovery/dog/39.webp"
+  },
+  {
+    "id": "dog-40",
+    "name": "English Setter",
+    "breed": "English Setter",
+    "species": "Dog",
+    "price": 26327,
+    "image": "/discovery/dog/40.webp"
+  },
+  {
+    "id": "dog-41",
+    "name": "Weimaraner",
+    "breed": "Weimaraner",
+    "species": "Dog",
+    "price": 26735,
+    "image": "/discovery/dog/41.webp"
+  },
+  {
+    "id": "dog-42",
+    "name": "Vizsla",
+    "breed": "Vizsla",
+    "species": "Dog",
+    "price": 27143,
+    "image": "/discovery/dog/42.webp"
+  },
+  {
+    "id": "dog-43",
+    "name": "Papillon",
+    "breed": "Papillon",
+    "species": "Dog",
+    "price": 27551,
+    "image": "/discovery/dog/43.webp"
+  },
+  {
+    "id": "dog-44",
+    "name": "Lhasa Apso",
+    "breed": "Lhasa Apso",
+    "species": "Dog",
+    "price": 27959,
+    "image": "/discovery/dog/44.webp"
+  },
+  {
+    "id": "dog-45",
+    "name": "Basenji",
+    "breed": "Basenji",
+    "species": "Dog",
+    "price": 28367,
+    "image": "/discovery/dog/45.webp"
+  },
+  {
+    "id": "dog-46",
+    "name": "American Pit Bull Terrier",
+    "breed": "American Pit Bull Terrier",
+    "species": "Dog",
+    "price": 28776,
+    "image": "/discovery/dog/46.webp"
+  },
+  {
+    "id": "dog-47",
+    "name": "Staffordshire Bull Terrier",
+    "breed": "Staffordshire Bull Terrier",
+    "species": "Dog",
+    "price": 29184,
+    "image": "/discovery/dog/47.webp"
+  },
+  {
+    "id": "dog-48",
+    "name": "Miniature Schnauzer",
+    "breed": "Miniature Schnauzer",
+    "species": "Dog",
+    "price": 29592,
+    "image": "/discovery/dog/48.webp"
+  },
+  {
+    "id": "dog-49",
+    "name": "Standard Poodle",
+    "breed": "Standard Poodle",
+    "species": "Dog",
+    "price": 30000,
+    "image": "/discovery/dog/49.webp"
+  },
+  {
+    "id": "cat-0",
+    "name": "Persian",
+    "breed": "Persian",
+    "species": "Cat",
+    "price": 10000,
+    "image": "/discovery/cat/0.webp"
+  },
+  {
+    "id": "cat-1",
+    "name": "Maine Coon",
+    "breed": "Maine Coon",
+    "species": "Cat",
+    "price": 11053,
+    "image": "/discovery/cat/1.webp"
+  },
+  {
+    "id": "cat-2",
+    "name": "Siamese",
+    "breed": "Siamese",
+    "species": "Cat",
+    "price": 12105,
+    "image": "/discovery/cat/2.webp"
+  },
+  {
+    "id": "cat-3",
+    "name": "Bengal",
+    "breed": "Bengal",
+    "species": "Cat",
+    "price": 13158,
+    "image": "/discovery/cat/3.webp"
+  },
+  {
+    "id": "cat-4",
+    "name": "British Shorthair",
+    "breed": "British Shorthair",
+    "species": "Cat",
+    "price": 14211,
+    "image": "/discovery/cat/4.webp"
+  },
+  {
+    "id": "cat-5",
+    "name": "Ragdoll",
+    "breed": "Ragdoll",
+    "species": "Cat",
+    "price": 15263,
+    "image": "/discovery/cat/5.webp"
+  },
+  {
+    "id": "cat-6",
+    "name": "Sphynx",
+    "breed": "Sphynx",
+    "species": "Cat",
+    "price": 16316,
+    "image": "/discovery/cat/6.webp"
+  },
+  {
+    "id": "cat-7",
+    "name": "Scottish Fold",
+    "breed": "Scottish Fold",
+    "species": "Cat",
+    "price": 17368,
+    "image": "/discovery/cat/7.webp"
+  },
+  {
+    "id": "cat-8",
+    "name": "American Shorthair",
+    "breed": "American Shorthair",
+    "species": "Cat",
+    "price": 18421,
+    "image": "/discovery/cat/8.webp"
+  },
+  {
+    "id": "cat-9",
+    "name": "Russian Blue",
+    "breed": "Russian Blue",
+    "species": "Cat",
+    "price": 19474,
+    "image": "/discovery/cat/9.webp"
+  },
+  {
+    "id": "cat-10",
+    "name": "Abyssinian",
+    "breed": "Abyssinian",
+    "species": "Cat",
+    "price": 20526,
+    "image": "/discovery/cat/10.webp"
+  },
+  {
+    "id": "cat-11",
+    "name": "Birman",
+    "breed": "Birman",
+    "species": "Cat",
+    "price": 21579,
+    "image": "/discovery/cat/11.webp"
+  },
+  {
+    "id": "cat-12",
+    "name": "Norwegian Forest Cat",
+    "breed": "Norwegian Forest Cat",
+    "species": "Cat",
+    "price": 22632,
+    "image": "/discovery/cat/12.webp"
+  },
+  {
+    "id": "cat-13",
+    "name": "Turkish Angora",
+    "breed": "Turkish Angora",
+    "species": "Cat",
+    "price": 23684,
+    "image": "/discovery/cat/13.webp"
+  },
+  {
+    "id": "cat-14",
+    "name": "Himalayan",
+    "breed": "Himalayan",
+    "species": "Cat",
+    "price": 24737,
+    "image": "/discovery/cat/14.webp"
+  },
+  {
+    "id": "cat-15",
+    "name": "Exotic Shorthair",
+    "breed": "Exotic Shorthair",
+    "species": "Cat",
+    "price": 25789,
+    "image": "/discovery/cat/15.webp"
+  },
+  {
+    "id": "cat-16",
+    "name": "Burmese",
+    "breed": "Burmese",
+    "species": "Cat",
+    "price": 26842,
+    "image": "/discovery/cat/16.webp"
+  },
+  {
+    "id": "cat-17",
+    "name": "Bombay Cat",
+    "breed": "Bombay Cat",
+    "species": "Cat",
+    "price": 27895,
+    "image": "/discovery/cat/17.webp"
+  },
+  {
+    "id": "cat-18",
+    "name": "Devon Rex",
+    "breed": "Devon Rex",
+    "species": "Cat",
+    "price": 28947,
+    "image": "/discovery/cat/18.webp"
+  },
+  {
+    "id": "cat-19",
+    "name": "Cornish Rex",
+    "breed": "Cornish Rex",
+    "species": "Cat",
+    "price": 30000,
+    "image": "/discovery/cat/19.webp"
+  },
+  {
+    "id": "cat-20",
+    "name": "Oriental Shorthair",
+    "breed": "Oriental Shorthair",
+    "species": "Cat",
+    "price": 20256,
+    "image": "/discovery/cat/20.webp"
+  },
+  {
+    "id": "cat-21",
+    "name": "American Curl",
+    "breed": "American Curl",
+    "species": "Cat",
+    "price": 20769,
+    "image": "/discovery/cat/21.webp"
+  },
+  {
+    "id": "cat-22",
+    "name": "Manx",
+    "breed": "Manx",
+    "species": "Cat",
+    "price": 21282,
+    "image": "/discovery/cat/22.webp"
+  },
+  {
+    "id": "cat-23",
+    "name": "Balinese",
+    "breed": "Balinese",
+    "species": "Cat",
+    "price": 21795,
+    "image": "/discovery/cat/23.webp"
+  },
+  {
+    "id": "cat-24",
+    "name": "Somali",
+    "breed": "Somali",
+    "species": "Cat",
+    "price": 22308,
+    "image": "/discovery/cat/24.webp"
+  },
+  {
+    "id": "cat-25",
+    "name": "Tonkinese",
+    "breed": "Tonkinese",
+    "species": "Cat",
+    "price": 22821,
+    "image": "/discovery/cat/25.webp"
+  },
+  {
+    "id": "cat-26",
+    "name": "Ocicat",
+    "breed": "Ocicat",
+    "species": "Cat",
+    "price": 23333,
+    "image": "/discovery/cat/26.webp"
+  },
+  {
+    "id": "cat-27",
+    "name": "Savannah",
+    "breed": "Savannah",
+    "species": "Cat",
+    "price": 23846,
+    "image": "/discovery/cat/27.webp"
+  },
+  {
+    "id": "cat-28",
+    "name": "Egyptian Mau",
+    "breed": "Egyptian Mau",
+    "species": "Cat",
+    "price": 24359,
+    "image": "/discovery/cat/28.webp"
+  },
+  {
+    "id": "cat-29",
+    "name": "Turkish Van",
+    "breed": "Turkish Van",
+    "species": "Cat",
+    "price": 24872,
+    "image": "/discovery/cat/29.webp"
+  },
+  {
+    "id": "cat-30",
+    "name": "Siberian",
+    "breed": "Siberian",
+    "species": "Cat",
+    "price": 25385,
+    "image": "/discovery/cat/30.webp"
+  },
+  {
+    "id": "cat-31",
+    "name": "Chartreux",
+    "breed": "Chartreux",
+    "species": "Cat",
+    "price": 25897,
+    "image": "/discovery/cat/31.webp"
+  },
+  {
+    "id": "cat-32",
+    "name": "Ragamuffin",
+    "breed": "Ragamuffin",
+    "species": "Cat",
+    "price": 26410,
+    "image": "/discovery/cat/32.webp"
+  },
+  {
+    "id": "cat-33",
+    "name": "LaPerm",
+    "breed": "LaPerm",
+    "species": "Cat",
+    "price": 26923,
+    "image": "/discovery/cat/33.webp"
+  },
+  {
+    "id": "cat-34",
+    "name": "Singapura",
+    "breed": "Singapura",
+    "species": "Cat",
+    "price": 27436,
+    "image": "/discovery/cat/34.webp"
+  },
+  {
+    "id": "cat-35",
+    "name": "Munchkin",
+    "breed": "Munchkin",
+    "species": "Cat",
+    "price": 27949,
+    "image": "/discovery/cat/35.webp"
+  },
+  {
+    "id": "cat-36",
+    "name": "Japanese Bobtail",
+    "breed": "Japanese Bobtail",
+    "species": "Cat",
+    "price": 28462,
+    "image": "/discovery/cat/36.webp"
+  },
+  {
+    "id": "cat-37",
+    "name": "Korat",
+    "breed": "Korat",
+    "species": "Cat",
+    "price": 28974,
+    "image": "/discovery/cat/37.webp"
+  },
+  {
+    "id": "cat-38",
+    "name": "Selkirk Rex",
+    "breed": "Selkirk Rex",
+    "species": "Cat",
+    "price": 29487,
+    "image": "/discovery/cat/38.webp"
+  },
+  {
+    "id": "cat-39",
+    "name": "Peterbald",
+    "breed": "Peterbald",
+    "species": "Cat",
+    "price": 30000,
+    "image": "/discovery/cat/39.webp"
+  },
+  {
+    "id": "rabbit-0",
+    "name": "New Zealand White",
+    "breed": "New Zealand White",
+    "species": "Rabbit",
+    "price": 3000,
+    "image": "/discovery/rabbit/0.webp"
+  },
+  {
+    "id": "rabbit-1",
+    "name": "Dutch Rabbit",
+    "breed": "Dutch Rabbit",
+    "species": "Rabbit",
+    "price": 3158,
+    "image": "/discovery/rabbit/1.webp"
+  },
+  {
+    "id": "rabbit-2",
+    "name": "Holland Lop",
+    "breed": "Holland Lop",
+    "species": "Rabbit",
+    "price": 3316,
+    "image": "/discovery/rabbit/2.webp"
+  },
+  {
+    "id": "rabbit-3",
+    "name": "Mini Lop",
+    "breed": "Mini Lop",
+    "species": "Rabbit",
+    "price": 3474,
+    "image": "/discovery/rabbit/3.webp"
+  },
+  {
+    "id": "rabbit-4",
+    "name": "Netherland Dwarf",
+    "breed": "Netherland Dwarf",
+    "species": "Rabbit",
+    "price": 3632,
+    "image": "/discovery/rabbit/4.webp"
+  },
+  {
+    "id": "rabbit-5",
+    "name": "Lionhead",
+    "breed": "Lionhead",
+    "species": "Rabbit",
+    "price": 3789,
+    "image": "/discovery/rabbit/5.webp"
+  },
+  {
+    "id": "rabbit-6",
+    "name": "Angora",
+    "breed": "Angora",
+    "species": "Rabbit",
+    "price": 3947,
+    "image": "/discovery/rabbit/6.webp"
+  },
+  {
+    "id": "rabbit-7",
+    "name": "Rex Rabbit",
+    "breed": "Rex Rabbit",
+    "species": "Rabbit",
+    "price": 4105,
+    "image": "/discovery/rabbit/7.webp"
+  },
+  {
+    "id": "rabbit-8",
+    "name": "California White",
+    "breed": "California White",
+    "species": "Rabbit",
+    "price": 4263,
+    "image": "/discovery/rabbit/8.webp"
+  },
+  {
+    "id": "rabbit-9",
+    "name": "Flemish Giant",
+    "breed": "Flemish Giant",
+    "species": "Rabbit",
+    "price": 4421,
+    "image": "/discovery/rabbit/9.webp"
+  },
+  {
+    "id": "rabbit-10",
+    "name": "Grey Giant",
+    "breed": "Grey Giant",
+    "species": "Rabbit",
+    "price": 4579,
+    "image": "/discovery/rabbit/10.webp"
+  },
+  {
+    "id": "rabbit-11",
+    "name": "White Giant",
+    "breed": "White Giant",
+    "species": "Rabbit",
+    "price": 4737,
+    "image": "/discovery/rabbit/11.webp"
+  },
+  {
+    "id": "rabbit-12",
+    "name": "Himalayan Rabbit",
+    "breed": "Himalayan Rabbit",
+    "species": "Rabbit",
+    "price": 4895,
+    "image": "/discovery/rabbit/12.webp"
+  },
+  {
+    "id": "rabbit-13",
+    "name": "Harlequin Rabbit",
+    "breed": "Harlequin Rabbit",
+    "species": "Rabbit",
+    "price": 5053,
+    "image": "/discovery/rabbit/13.webp"
+  },
+  {
+    "id": "rabbit-14",
+    "name": "Soviet Chinchilla",
+    "breed": "Soviet Chinchilla",
+    "species": "Rabbit",
+    "price": 5211,
+    "image": "/discovery/rabbit/14.webp"
+  },
+  {
+    "id": "rabbit-15",
+    "name": "Dwarf Lop",
+    "breed": "Dwarf Lop",
+    "species": "Rabbit",
+    "price": 5368,
+    "image": "/discovery/rabbit/15.webp"
+  },
+  {
+    "id": "rabbit-16",
+    "name": "American Rabbit",
+    "breed": "American Rabbit",
+    "species": "Rabbit",
+    "price": 5526,
+    "image": "/discovery/rabbit/16.webp"
+  },
+  {
+    "id": "fish-0",
+    "name": "Guppy",
+    "breed": "Guppy",
+    "species": "Fish",
+    "price": 250,
+    "image": "/discovery/fish/0.webp"
+  },
+  {
+    "id": "fish-1",
+    "name": "Betta / Siamese Fighting Fish",
+    "breed": "Betta / Siamese Fighting Fish",
+    "species": "Fish",
+    "price": 300,
+    "image": "/discovery/fish/1.webp"
+  },
+  {
+    "id": "fish-2",
+    "name": "Goldfish",
+    "breed": "Goldfish",
+    "species": "Fish",
+    "price": 350,
+    "image": "/discovery/fish/2.webp"
+  },
+  {
+    "id": "fish-3",
+    "name": "Koi Fish",
+    "breed": "Koi Fish",
+    "species": "Fish",
+    "price": 400,
+    "image": "/discovery/fish/3.webp"
+  },
+  {
+    "id": "fish-4",
+    "name": "Molly",
+    "breed": "Molly",
+    "species": "Fish",
+    "price": 450,
+    "image": "/discovery/fish/4.webp"
+  },
+  {
+    "id": "fish-5",
+    "name": "Platy",
+    "breed": "Platy",
+    "species": "Fish",
+    "price": 500,
+    "image": "/discovery/fish/5.webp"
+  },
+  {
+    "id": "fish-6",
+    "name": "Swordtail",
+    "breed": "Swordtail",
+    "species": "Fish",
+    "price": 550,
+    "image": "/discovery/fish/6.webp"
+  },
+  {
+    "id": "fish-7",
+    "name": "Neon Tetra",
+    "breed": "Neon Tetra",
+    "species": "Fish",
+    "price": 600,
+    "image": "/discovery/fish/7.webp"
+  },
+  {
+    "id": "fish-8",
+    "name": "Zebra Danio",
+    "breed": "Zebra Danio",
+    "species": "Fish",
+    "price": 650,
+    "image": "/discovery/fish/8.webp"
+  },
+  {
+    "id": "fish-9",
+    "name": "Angelfish",
+    "breed": "Angelfish",
+    "species": "Fish",
+    "price": 700,
+    "image": "/discovery/fish/9.webp"
+  },
+  {
+    "id": "fish-10",
+    "name": "Oscar Fish",
+    "breed": "Oscar Fish",
+    "species": "Fish",
+    "price": 750,
+    "image": "/discovery/fish/10.webp"
+  },
+  {
+    "id": "fish-11",
+    "name": "Tiger Barb",
+    "breed": "Tiger Barb",
+    "species": "Fish",
+    "price": 800,
+    "image": "/discovery/fish/11.webp"
+  },
+  {
+    "id": "fish-12",
+    "name": "Cherry Barb",
+    "breed": "Cherry Barb",
+    "species": "Fish",
+    "price": 850,
+    "image": "/discovery/fish/12.webp"
+  },
+  {
+    "id": "fish-13",
+    "name": "Gourami",
+    "breed": "Gourami",
+    "species": "Fish",
+    "price": 900,
+    "image": "/discovery/fish/13.webp"
+  },
+  {
+    "id": "fish-14",
+    "name": "Discus",
+    "breed": "Discus",
+    "species": "Fish",
+    "price": 950,
+    "image": "/discovery/fish/14.webp"
+  },
+  {
+    "id": "fish-15",
+    "name": "Flowerhorn",
+    "breed": "Flowerhorn",
+    "species": "Fish",
+    "price": 1000,
+    "image": "/discovery/fish/15.webp"
+  },
+  {
+    "id": "fish-16",
+    "name": "Cichlid",
+    "breed": "Cichlid",
+    "species": "Fish",
+    "price": 1050,
+    "image": "/discovery/fish/16.webp"
+  },
+  {
+    "id": "fish-17",
+    "name": "Corydoras",
+    "breed": "Corydoras",
+    "species": "Fish",
+    "price": 1100,
+    "image": "/discovery/fish/17.webp"
+  },
+  {
+    "id": "fish-18",
+    "name": "Pleco",
+    "breed": "Pleco",
+    "species": "Fish",
+    "price": 1150,
+    "image": "/discovery/fish/18.webp"
+  },
+  {
+    "id": "fish-19",
+    "name": "Rainbow Fish",
+    "breed": "Rainbow Fish",
+    "species": "Fish",
+    "price": 1200,
+    "image": "/discovery/fish/19.webp"
+  },
+  {
+    "id": "fish-20",
+    "name": "Rasbora",
+    "breed": "Rasbora",
+    "species": "Fish",
+    "price": 4250,
+    "image": "/discovery/fish/20.webp"
+  },
+  {
+    "id": "fish-21",
+    "name": "Arowana",
+    "breed": "Arowana",
+    "species": "Fish",
+    "price": 4438,
+    "image": "/discovery/fish/21.webp"
+  },
+  {
+    "id": "fish-22",
+    "name": "Bala Shark",
+    "breed": "Bala Shark",
+    "species": "Fish",
+    "price": 4625,
+    "image": "/discovery/fish/22.webp"
+  },
+  {
+    "id": "fish-23",
+    "name": "Red Tail Shark",
+    "breed": "Red Tail Shark",
+    "species": "Fish",
+    "price": 4812,
+    "image": "/discovery/fish/23.webp"
+  },
+  {
+    "id": "fish-24",
+    "name": "Clown Loach",
+    "breed": "Clown Loach",
+    "species": "Fish",
+    "price": 5000,
+    "image": "/discovery/fish/24.webp"
+  },
+  {
+    "id": "bird-0",
+    "name": "Budgerigar (Budgie)",
+    "breed": "Budgerigar (Budgie)",
+    "species": "Bird",
+    "price": 1200,
+    "image": "/discovery/bird/0.webp"
+  },
+  {
+    "id": "bird-1",
+    "name": "Lovebird",
+    "breed": "Lovebird",
+    "species": "Bird",
+    "price": 1500,
+    "image": "/discovery/bird/1.webp"
+  },
+  {
+    "id": "bird-2",
+    "name": "Cockatiel",
+    "breed": "Cockatiel",
+    "species": "Bird",
+    "price": 1800,
+    "image": "/discovery/bird/2.webp"
+  },
+  {
+    "id": "bird-3",
+    "name": "Indian Ringneck",
+    "breed": "Indian Ringneck",
+    "species": "Bird",
+    "price": 2100,
+    "image": "/discovery/bird/3.webp"
+  },
+  {
+    "id": "bird-4",
+    "name": "Alexandrine Parakeet",
+    "breed": "Alexandrine Parakeet",
+    "species": "Bird",
+    "price": 2400,
+    "image": "/discovery/bird/4.webp"
+  },
+  {
+    "id": "bird-5",
+    "name": "African Grey Parrot",
+    "breed": "African Grey Parrot",
+    "species": "Bird",
+    "price": 2700,
+    "image": "/discovery/bird/5.webp"
+  },
+  {
+    "id": "bird-6",
+    "name": "Macaw",
+    "breed": "Macaw",
+    "species": "Bird",
+    "price": 3000,
+    "image": "/discovery/bird/6.webp"
+  },
+  {
+    "id": "bird-7",
+    "name": "Cockatoo",
+    "breed": "Cockatoo",
+    "species": "Bird",
+    "price": 3300,
+    "image": "/discovery/bird/7.webp"
+  },
+  {
+    "id": "bird-8",
+    "name": "Conure",
+    "breed": "Conure",
+    "species": "Bird",
+    "price": 3600,
+    "image": "/discovery/bird/8.webp"
+  },
+  {
+    "id": "bird-9",
+    "name": "Eclectus Parrot",
+    "breed": "Eclectus Parrot",
+    "species": "Bird",
+    "price": 3900,
+    "image": "/discovery/bird/9.webp"
+  },
+  {
+    "id": "bird-10",
+    "name": "Canary",
+    "breed": "Canary",
+    "species": "Bird",
+    "price": 4200,
+    "image": "/discovery/bird/10.webp"
+  },
+  {
+    "id": "bird-11",
+    "name": "Zebra Finch",
+    "breed": "Zebra Finch",
+    "species": "Bird",
+    "price": 4500,
+    "image": "/discovery/bird/11.webp"
+  },
+  {
+    "id": "bird-12",
+    "name": "Gouldian Finch",
+    "breed": "Gouldian Finch",
+    "species": "Bird",
+    "price": 4800,
+    "image": "/discovery/bird/12.webp"
+  },
+  {
+    "id": "bird-13",
+    "name": "Society Finch",
+    "breed": "Society Finch",
+    "species": "Bird",
+    "price": 5100,
+    "image": "/discovery/bird/13.webp"
+  },
+  {
+    "id": "bird-14",
+    "name": "Java Sparrow",
+    "breed": "Java Sparrow",
+    "species": "Bird",
+    "price": 5400,
+    "image": "/discovery/bird/14.webp"
+  },
+  {
+    "id": "bird-15",
+    "name": "Diamond Dove",
+    "breed": "Diamond Dove",
+    "species": "Bird",
+    "price": 5700,
+    "image": "/discovery/bird/15.webp"
+  },
+  {
+    "id": "bird-16",
+    "name": "Fantail Pigeon",
+    "breed": "Fantail Pigeon",
+    "species": "Bird",
+    "price": 6000,
+    "image": "/discovery/bird/16.webp"
+  },
+  {
+    "id": "bird-17",
+    "name": "King Pigeon",
+    "breed": "King Pigeon",
+    "species": "Bird",
+    "price": 6300,
+    "image": "/discovery/bird/17.webp"
+  },
+  {
+    "id": "bird-18",
+    "name": "Jacobin Pigeon",
+    "breed": "Jacobin Pigeon",
+    "species": "Bird",
+    "price": 6600,
+    "image": "/discovery/bird/18.webp"
+  },
+  {
+    "id": "bird-19",
+    "name": "Lahore Pigeon",
+    "breed": "Lahore Pigeon",
+    "species": "Bird",
+    "price": 6900,
+    "image": "/discovery/bird/19.webp"
+  },
+  {
+    "id": "bird-20",
+    "name": "Racing Pigeon",
+    "breed": "Racing Pigeon",
+    "species": "Bird",
+    "price": 6138,
+    "image": "/discovery/bird/20.webp"
+  },
+  {
+    "id": "bird-21",
+    "name": "Ringneck Dove",
+    "breed": "Ringneck Dove",
+    "species": "Bird",
+    "price": 6345,
+    "image": "/discovery/bird/21.webp"
+  },
+  {
+    "id": "bird-22",
+    "name": "Quail",
+    "breed": "Quail",
+    "species": "Bird",
+    "price": 6552,
+    "image": "/discovery/bird/22.webp"
+  },
+  {
+    "id": "bird-23",
+    "name": "Button Quail",
+    "breed": "Button Quail",
+    "species": "Bird",
+    "price": 6759,
+    "image": "/discovery/bird/23.webp"
+  },
+  {
+    "id": "bird-24",
+    "name": "Mandarin Duck",
+    "breed": "Mandarin Duck",
+    "species": "Bird",
+    "price": 6966,
+    "image": "/discovery/bird/24.webp"
+  },
+  {
+    "id": "bird-25",
+    "name": "Domestic Duck",
+    "breed": "Domestic Duck",
+    "species": "Bird",
+    "price": 7172,
+    "image": "/discovery/bird/25.webp"
+  },
+  {
+    "id": "bird-26",
+    "name": "Domestic Goose",
+    "breed": "Domestic Goose",
+    "species": "Bird",
+    "price": 7379,
+    "image": "/discovery/bird/26.webp"
+  },
+  {
+    "id": "bird-27",
+    "name": "Pheasant",
+    "breed": "Pheasant",
+    "species": "Bird",
+    "price": 7586,
+    "image": "/discovery/bird/27.webp"
+  },
+  {
+    "id": "bird-28",
+    "name": "Ornamental Chicken",
+    "breed": "Ornamental Chicken",
+    "species": "Bird",
+    "price": 7793,
+    "image": "/discovery/bird/28.webp"
+  },
+  {
+    "id": "bird-29",
+    "name": "Bantam Chicken",
+    "breed": "Bantam Chicken",
+    "species": "Bird",
+    "price": 8000,
+    "image": "/discovery/bird/29.webp"
+  },
+  {
+    "id": "tortoise-0",
+    "name": "Tortoise profile 1",
+    "species": "Tortoise",
+    "price": 3000,
+    "image": "/discovery/tortoise/0.webp",
+    "breed": "Tortoise profile 1"
+  },
+  {
+    "id": "tortoise-1",
+    "name": "Tortoise profile 2",
+    "species": "Tortoise",
+    "price": 3158,
+    "image": "/discovery/tortoise/1.webp",
+    "breed": "Tortoise profile 2"
+  },
+  {
+    "id": "tortoise-2",
+    "name": "Tortoise profile 3",
+    "species": "Tortoise",
+    "price": 3316,
+    "image": "/discovery/tortoise/2.webp",
+    "breed": "Tortoise profile 3"
+  },
+  {
+    "id": "tortoise-3",
+    "name": "Tortoise profile 4",
+    "species": "Tortoise",
+    "price": 3474,
+    "image": "/discovery/tortoise/3.webp",
+    "breed": "Tortoise profile 4"
+  },
+  {
+    "id": "tortoise-4",
+    "name": "Tortoise profile 5",
+    "species": "Tortoise",
+    "price": 3632,
+    "image": "/discovery/tortoise/4.webp",
+    "breed": "Tortoise profile 5"
+  },
+  {
+    "id": "tortoise-5",
+    "name": "Tortoise profile 6",
+    "species": "Tortoise",
+    "price": 3789,
+    "image": "/discovery/tortoise/5.webp",
+    "breed": "Tortoise profile 6"
+  },
+  {
+    "id": "tortoise-6",
+    "name": "Tortoise profile 7",
+    "species": "Tortoise",
+    "price": 3947,
+    "image": "/discovery/tortoise/6.webp",
+    "breed": "Tortoise profile 7"
+  },
+  {
+    "id": "tortoise-7",
+    "name": "Tortoise profile 8",
+    "species": "Tortoise",
+    "price": 4105,
+    "image": "/discovery/tortoise/7.webp",
+    "breed": "Tortoise profile 8"
+  },
+  {
+    "id": "tortoise-8",
+    "name": "Tortoise profile 9",
+    "species": "Tortoise",
+    "price": 4263,
+    "image": "/discovery/tortoise/8.webp",
+    "breed": "Tortoise profile 9"
+  },
+  {
+    "id": "tortoise-9",
+    "name": "Tortoise profile 10",
+    "species": "Tortoise",
+    "price": 4421,
+    "image": "/discovery/tortoise/9.webp",
+    "breed": "Tortoise profile 10"
+  },
+  {
+    "id": "tortoise-10",
+    "name": "Tortoise profile 11",
+    "species": "Tortoise",
+    "price": 4579,
+    "image": "/discovery/tortoise/10.webp",
+    "breed": "Tortoise profile 11"
+  },
+  {
+    "id": "tortoise-11",
+    "name": "Tortoise profile 12",
+    "species": "Tortoise",
+    "price": 4737,
+    "image": "/discovery/tortoise/11.webp",
+    "breed": "Tortoise profile 12"
+  },
+  {
+    "id": "tortoise-12",
+    "name": "Tortoise profile 13",
+    "species": "Tortoise",
+    "price": 4895,
+    "image": "/discovery/tortoise/12.webp",
+    "breed": "Tortoise profile 13"
+  },
+  {
+    "id": "tortoise-13",
+    "name": "Tortoise profile 14",
+    "species": "Tortoise",
+    "price": 5053,
+    "image": "/discovery/tortoise/13.webp",
+    "breed": "Tortoise profile 14"
+  },
+  {
+    "id": "tortoise-14",
+    "name": "Tortoise profile 15",
+    "species": "Tortoise",
+    "price": 5211,
+    "image": "/discovery/tortoise/14.webp",
+    "breed": "Tortoise profile 15"
+  },
+  {
+    "id": "tortoise-15",
+    "name": "Tortoise profile 16",
+    "species": "Tortoise",
+    "price": 5368,
+    "image": "/discovery/tortoise/15.webp",
+    "breed": "Tortoise profile 16"
+  },
+  {
+    "id": "tortoise-16",
+    "name": "Tortoise profile 17",
+    "species": "Tortoise",
+    "price": 5526,
+    "image": "/discovery/tortoise/16.webp",
+    "breed": "Tortoise profile 17"
+  },
+  {
+    "id": "tortoise-17",
+    "name": "Tortoise profile 18",
+    "species": "Tortoise",
+    "price": 5684,
+    "image": "/discovery/tortoise/17.webp",
+    "breed": "Tortoise profile 18"
+  },
+  {
+    "id": "tortoise-18",
+    "name": "Tortoise profile 19",
+    "species": "Tortoise",
+    "price": 5842,
+    "image": "/discovery/tortoise/18.webp",
+    "breed": "Tortoise profile 19"
+  },
+  {
+    "id": "tortoise-19",
+    "name": "Tortoise profile 20",
+    "species": "Tortoise",
+    "price": 6000,
+    "image": "/discovery/tortoise/19.webp",
+    "breed": "Tortoise profile 20"
+  }
+]

@@ -1,0 +1,51 @@
+import {chromium,expect} from '@playwright/test';
+import {mkdir} from 'node:fs/promises';
+const browser=await chromium.launch({channel:'msedge',headless:true});
+const page=await browser.newPage({viewport:{width:1280,height:900},reducedMotion:'reduce'});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));
+try {
+ await page.goto(process.env.PETMETA_TEST_URL||'http://127.0.0.1:3001/home',{waitUntil:'domcontentloaded',timeout:120000});
+ await expect(page.locator('.bomb-card')).toHaveCount(10,{timeout:60000});
+ const original=await page.evaluate(()=>JSON.parse(localStorage.getItem('pm-bomb-deals-v1')));
+ const name=await page.locator('.bomb-card h3').first().innerText();
+ const originalPrice=Number((await page.locator('.bomb-price b').first().innerText()).replace(/[^0-9]/g,''));
+ await page.locator('.bomb-reveal').first().click();
+ await expect(page.locator('.product-details-screen h1')).toHaveText(name);
+ const price=Number((await page.locator('.bomb-price b').first().innerText()).replace(/[^0-9]/g,''));
+ expect(price).toBe(Math.round(originalPrice*.8));
+ await expect(page.locator('.pd-deal-strip')).toContainText('Save ₹'+(originalPrice-price));
+ await page.locator('.product-details-screen').getByRole('button',{name:'Add to cart',exact:true}).click();
+ await page.locator('.pd-header').getByRole('button',{name:'View cart',exact:true}).click();
+ await expect(page.locator('.cart-row').first()).toContainText('₹'+price+' each');
+ await expect(page.locator('.cart-total')).toContainText('₹'+price);
+ await page.reload();await expect(page.locator('.bomb-card')).toHaveCount(10);
+ const restored=await page.evaluate(()=>JSON.parse(localStorage.getItem('pm-bomb-deals-v1')));
+ expect(restored.endsAt).toBe(original.endsAt);expect(restored.ids).toEqual(original.ids);
+ await expect(page.locator('.bomb-price b').first()).toHaveText('₹'+price.toLocaleString('en-IN'));
+ await mkdir('preview',{recursive:true});
+ await page.evaluate(()=>{const section=document.querySelector('.bomb-deals');const header=document.querySelector('.shop-header');window.scrollTo(0,section.getBoundingClientRect().top+scrollY-header.getBoundingClientRect().height-20);});
+ await page.locator('.bomb-deals').screenshot({path:'preview/bomb-deals-desktop.png'});
+ await page.setViewportSize({width:390,height:1000});
+ await page.evaluate(()=>{const section=document.querySelector('.bomb-deals');const header=document.querySelector('.shop-header');window.scrollTo(0,section.getBoundingClientRect().top+scrollY-header.getBoundingClientRect().height-20);});
+ await page.locator('.bomb-deals').screenshot({path:'preview/bomb-deals-mobile.png'});
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.emulateMedia({reducedMotion:'no-preference'});
+ await page.locator('.bomb-deals-sub button').nth(2).click();
+ await expect.poll(()=>page.locator('.bomb-deals-rail').evaluate(el=>el.scrollLeft)).toBeGreaterThan(100);
+ await page.getByRole('button',{name:'Play deal slideshow',exact:true}).click();
+ const before=await page.locator('.bomb-deals-rail').evaluate(el=>el.scrollLeft);
+ await expect.poll(()=>page.locator('.bomb-deals-rail').evaluate(el=>el.scrollLeft),{timeout:7000}).toBeGreaterThan(before+100);
+ await page.evaluate(()=>{const c=JSON.parse(localStorage.getItem('pm-bomb-deals-v1'));c.endsAt=Date.now()-1;localStorage.setItem('pm-bomb-deals-v1',JSON.stringify(c));window.dispatchEvent(new Event('pm-store-change'));});
+ await expect(page.locator('.bomb-card')).toHaveCount(10);
+ await expect(page.locator('.bomb-reveal').first()).toBeEnabled();
+ await expect.poll(()=>page.evaluate(()=>JSON.parse(localStorage.getItem('pm-bomb-deals-v1')).endsAt)).toBeGreaterThan(original.endsAt);
+ const renewed=await page.evaluate(()=>JSON.parse(localStorage.getItem('pm-bomb-deals-v1')));
+ expect(renewed.revealed).toEqual([]);expect(new Set(renewed.ids).size).toBe(10);expect([...renewed.ids].sort()).not.toEqual([...original.ids].sort());
+ await expect(page.locator('.bomb-price del')).toHaveCount(0);
+ await page.getByRole('button',{name:/Cart \(/}).click();
+ await expect(page.locator('.cart-row').first()).toContainText('₹'+originalPrice+' each');
+ expect(errors).toEqual([]);
+ console.log('PASS: 10 random deals; reveal discount; details/cart parity; reload persistence; mobile layout; automatic renewal replaces the selection and clears old unlocks.');
+} finally {await browser.close();}
+
+

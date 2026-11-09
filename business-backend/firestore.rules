@@ -1,0 +1,42 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function reviewer() { return signedIn() && request.auth.token.get('petmetaAdmin', false) == true; }
+    function member(b) { return get(/databases/$(database)/documents/businesses/$(b)/members/$(request.auth.uid)).data; }
+    function active(b) { return signedIn() && exists(/databases/$(database)/documents/businesses/$(b)/members/$(request.auth.uid)) && member(b).status == 'Active' && get(/databases/$(database)/documents/businesses/$(b)).data.status != 'Closed'; }
+    function owner(b) { return active(b) && member(b).role == 'Owner'; }
+    function branch(b) { return active(b) && resource.data.branchId in member(b).branchIds; }
+    function permitted(b, roles) { return owner(b) || branch(b) && member(b).role in roles; }
+    function customer() { return signedIn() && resource.data.get('customerUid', '') == request.auth.uid; }
+    // Preserve the consumer app's existing per-user storage contract.
+    match /users/{uid} { allow read, write: if signedIn() && request.auth.uid == uid; match /{document=**} { allow read, write: if signedIn() && request.auth.uid == uid; } }
+    match /businessAccounts/{uid} { allow read: if signedIn() && request.auth.uid == uid; allow write: if false; }
+    match /businessPreferences/{uid} { allow read: if signedIn() && request.auth.uid == uid; allow write: if false; }
+    match /businesses/{b} {
+      allow read: if active(b) || reviewer(); allow write: if false;
+      match /branches/{id} { allow read: if owner(b) || branch(b) || reviewer(); allow write: if false; }
+      match /pets/{id} { allow read: if permitted(b,['Branch Manager','Catalog Staff']) || reviewer(); allow write: if false; }
+      match /products/{id} { allow read: if permitted(b,['Branch Manager','Catalog Staff']) || reviewer(); allow write: if false; }
+      match /batches/{id} { allow read: if permitted(b,['Branch Manager','Catalog Staff']) || reviewer(); allow write: if false; }
+      match /doctors/{id} { allow read: if permitted(b,['Branch Manager','Receptionist']) || active(b) && resource.data.get('userUid','') == request.auth.uid || reviewer(); allow write: if false; }
+      match /appointments/{id} { allow read: if permitted(b,['Branch Manager','Receptionist']) || active(b) && member(b).role == 'Doctor' && resource.data.doctorUid == request.auth.uid || customer() || reviewer(); allow write: if false; }
+      match /clinicalNotes/{id} { allow read: if owner(b) || active(b) && member(b).role == 'Doctor' && resource.data.doctorUid == request.auth.uid || customer() && resource.data.shared == true || reviewer(); allow write: if false; }
+      match /orders/{id} { allow read: if permitted(b,['Branch Manager','Order Staff']) || customer() || reviewer(); allow write: if false; }
+      match /conversations/{id} { allow read: if permitted(b,['Branch Manager','Order Staff']) || customer() || reviewer(); allow write: if false; }
+      match /messages/{id} { allow read: if permitted(b,['Branch Manager','Order Staff']) || customer() || reviewer(); allow write: if false; }
+      match /notifications/{id} { allow read: if owner(b) || branch(b); allow write: if false; }
+      match /members/{id} { allow read: if owner(b) || signedIn() && request.auth.uid == id; allow write: if false; }
+      match /invitations/{id} { allow read: if owner(b); allow write: if false; }
+      match /documents/{id} { allow read: if owner(b) || reviewer(); allow write: if false; }
+      match /support/{id} { allow read: if owner(b) || reviewer(); allow write: if false; }
+      match /transactions/{id} { allow read: if owner(b); allow write: if false; }
+      match /audit/{id} { allow read: if owner(b) || reviewer(); allow write: if false; }
+    }
+    match /publicBusinesses/{b} {
+      allow read: if true; allow write: if false;
+      match /{kind}/{id} { allow read: if kind in ['publicPets','publicProducts','publicDoctors','publicBranches'] && exists(/databases/$(database)/documents/publicBusinesses/$(b)); allow write: if false; }
+    }
+    match /{document=**} { allow read,write: if false; }
+  }
+}

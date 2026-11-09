@@ -1,0 +1,13 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),ts=require('typescript');
+const moduleValue={exports:{}};
+new Function('exports','module',ts.transpileModule(fs.readFileSync('lib/business/inbox.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText)(moduleValue.exports,moduleValue);
+const {businessInbox,appointmentMatchesDate}=moduleValue.exports;
+const future={id:'booking',branchId:'second',fields:{Date:'2030-01-10'},status:'Requested'};
+const order={id:'order',branchId:'second',fields:{},status:'New'};
+assert.deepEqual(businessInbox([future,order],'Owner','first'),[future,order]);
+assert.deepEqual(businessInbox([future,order],'Receptionist','first'),[]);
+assert.deepEqual(businessInbox([future],'Receptionist','second'),[future]);
+assert.equal(appointmentMatchesDate(future,'2026-11-03',true),true);
+assert.equal(appointmentMatchesDate(future,'2026-11-03',false),false);
+assert.equal(appointmentMatchesDate(future,'2030-01-10',false),true);
+console.log('PASS: future booking and second-branch order visible to owner; staff branch scope and date filtering preserved.');

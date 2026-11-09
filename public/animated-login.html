@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0d0d0f"><title>Real-Time Animated · Login Page</title><link rel="stylesheet" href="animated-login.css"><link rel="stylesheet" href="video-reference.css"><link rel="stylesheet" href="robot.css"><link rel="stylesheet" href="cat-character.css"><style>*{box-sizing:border-box}body{margin:0}button,input{font:inherit}a{color:inherit;text-decoration:none}.animated-auth-header a{display:flex;align-items:center;gap:6px}.animated-auth-header{height:62px}.auth-tabs button.active{background:#6c63ff25;color:#ece8ff;border-color:#8174ff8a;box-shadow:0 0 15px #6c63ff19}[hidden]{display:none!important}</style></head>
+<body class="animated-auth">
+<header class="animated-auth-header"><a href="animated-login.html" aria-label="PetMeta home"></a><span>YOUR LITTLE COMPANION <span style="color:#a79dff">✦</span></span></header>
+<main class="auth-center">
+  <div class="auth-heading"><span>Real-Time Animated</span><h1>Login Page <span role="img" aria-label="cat">🐈</span></h1></div>
+  <div class="auth-stack">
+    <div class="reactive-cat mood-idle" id="mascot" data-mood="idle">
+      <div class="cat-character state-idle" id="photo" role="img" aria-label="Animated orange kitten"><canvas class="cat-puppet" aria-label="Orange kitten reacting to the form"></canvas></div>
+      <div class="mood-bubble" id="bubble" role="status">Hello there, future best friend.</div>
+    </div>
+    <section class="reactive-auth-card" id="card" aria-labelledby="form-title">
+      <div class="auth-tabs" role="tablist" aria-label="Account access"><button type="button" id="register-tab" role="tab" class="active" aria-selected="true" aria-controls="account-panel">Register</button><button type="button" id="signin-tab" role="tab" aria-selected="false" aria-controls="account-panel" tabindex="-1">Sign In</button></div>
+      <div id="account-panel" role="tabpanel" aria-labelledby="register-tab">
+      <h2 id="form-title">Create Account</h2><p id="subtitle" style="color:var(--muted);font-size:12px;margin:0 0 25px;line-height:1.6">Join us today &amp; get access to your dashboard</p>
+      <form id="account-form" novalidate>
+        <label id="name-label" for="full-name">Full Name<div class="input-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 21v-3a7 7 0 0 1 14 0v3"/></svg><input id="full-name" name="name" autocomplete="name" placeholder="e.g. Usman Shams" aria-describedby="name-error"><span></span></div><span class="field-error" id="name-error"></span></label>
+        <label for="email">Email Address<div class="input-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 6 9 7 9-7"/></svg><input id="email" name="email" type="email" autocomplete="email" placeholder="usman@company.com" aria-describedby="email-error"></div><span class="field-error" id="email-error"></span></label>
+        <label for="password"><span class="password-label-row">Password<button type="button" class="forgot-password" id="forgot-password" hidden>Forgot password?</button></span><div class="input-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2"/></svg><input id="password" name="password" type="password" autocomplete="new-password" placeholder="••••••••" aria-describedby="password-help password-error"><button type="button" id="toggle-password" aria-label="Show password" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/><path id="eye-slash" d="m3 3 18 18" hidden/></svg></button></div><span id="password-help" class="password-help">At least 8 characters, with a letter and a number or symbol.</span><span class="field-error" id="password-error"></span></label>
+        <button class="auth-submit" id="submit-button" type="submit">Create Account</button>
+        <p class="form-status" id="status" role="status"></p>
+      </form>
+      </div>
+      <p class="auth-footer"><span id="footer-text">Already have an account?</span> <a href="#signin" id="footer-link">Sign In</a></p>
+    </section>
+  </div>
+  <p class="auth-bottom-note">A little care. A lot of love. <span aria-hidden="true">✦</span></p>
+  <p class="auth-bottom-note" style="margin-top:12px;font-size:10px">Interactive demo · no account is created or data stored.</p>
+  <a class="photo-credit" href="https://www.pexels.com/photo/close-up-portrait-of-a-cat-with-green-eyes-35657005/" target="_blank" rel="noreferrer">Cat photography · Pexels ↗</a>
+<small class="reference-disclosure">Interactive demo · no account is created.</small></main><script src="animated-login.js"></script><script src="cat-puppet.js"></script>
+</body></html>
+
+

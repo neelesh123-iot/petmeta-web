@@ -1,0 +1,5 @@
+# Rider illustration prompt
+
+Mode: built-in image generation. Saved asset: `public/rider/rider-hero.png`.
+
+Premium editorial 3D clay illustration for a mobile delivery partner app, landscape 3:2 composition. Friendly young Indian man short dark hair wearing warm yellow #FFD43B jacket, charcoal trousers, white sneakers, yellow safety helmet, standing relaxed beside a sleek cream-and-charcoal electric scooter. Yellow box delivery bag attached behind seat with simple black paw emblem and small PetMeta wordmark. Rider holding helmet strap with one hand, other relaxed. Original tasteful tactile sculptural 3D style, soft rounded forms, realistic proportions, sophisticated product render, not childish. Solid soft warm cream #FFFCF2 background, subtle floor shadow, entire scooter and rider fully in frame, centered with generous negative space. Small white fluffy dog sitting by front wheel. No page UI, no extra text, no gradients, no photographic background. Yellow and charcoal branding consistent. Fine studio lighting.

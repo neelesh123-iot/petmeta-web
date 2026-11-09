@@ -1,0 +1,18 @@
+import {chromium} from '@playwright/test';
+import {pathToFileURL} from 'node:url';
+import {resolve} from 'node:path';
+const browser=await chromium.launch({channel:'msedge',headless:true});
+const page=await browser.newPage({viewport:{width:540,height:960}});
+await page.goto(pathToFileURL(resolve('public/animated-login.html')).href);
+await page.screenshot({path:'test-results/robot-register.png'});
+await page.locator('#email').focus();
+await page.screenshot({path:'test-results/robot-email.png'});
+await page.locator('#password').fill('secret123');
+await page.waitForFunction(()=>getComputedStyle(document.querySelector('.robot-visor')).opacity==='0');
+await page.waitForTimeout(500);
+await page.screenshot({path:'test-results/robot-privacy.png'});
+await page.locator('#signin-tab').click();
+await page.waitForTimeout(650);
+await page.screenshot({path:'test-results/robot-signin.png'});
+console.log('Reference screenshots saved.');
+await browser.close();
